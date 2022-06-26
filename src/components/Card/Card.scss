@@ -1,0 +1,33 @@
+// .card{
+//     width: 10rem;
+//     height: auto;
+//     position: absolute;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.5rem;
+//     border: 7px solid var(--orangeCard);
+//     text-align: center;
+//     background: rgba(255,255,255,0.26);
+//     box-shadow: var(--boxShadow);
+//     border-radius: 20px;
+//     padding: 0px 26px 2rem 26px;
+
+//     img {
+//         transform: scale(0.6);
+//         margin-bottom: -2rem;
+//     }
+
+//     span {
+//         &:nth-of-type(2){
+//             color: var(--gray);
+//             font-size: 12px;
+//         }
+//     }
+//     button {
+//         background-color: white;
+//         border-radius: 5px;
+//         color: rgb(119, 195, 220);
+//         border: 2px solid rgba(180, 180, 180, 0.482);
+//     }
+    
+// }
