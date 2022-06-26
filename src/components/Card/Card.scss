@@ -1,33 +1,127 @@
-// .card{
-//     width: 10rem;
-//     height: auto;
-//     position: absolute;
-//     display: flex;
-//     flex-direction: column;
-//     gap: 0.5rem;
-//     border: 7px solid var(--orangeCard);
-//     text-align: center;
-//     background: rgba(255,255,255,0.26);
-//     box-shadow: var(--boxShadow);
-//     border-radius: 20px;
-//     padding: 0px 26px 2rem 26px;
 
-//     img {
-//         transform: scale(0.6);
-//         margin-bottom: -2rem;
-//     }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+.card{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgba(194, 194, 194, 0.551);
+    border-radius: 10px;
 
-//     span {
-//         &:nth-of-type(2){
-//             color: var(--gray);
-//             font-size: 12px;
-//         }
-//     }
-//     button {
-//         background-color: white;
-//         border-radius: 5px;
-//         color: rgb(119, 195, 220);
-//         border: 2px solid rgba(180, 180, 180, 0.482);
-//     }
-    
-// }
+    .card-left {
+        flex: 0.4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+
+        }
+
+        .img-text {
+            margin-left: 10px;
+            font-weight: 700;
+
+            .tags {
+                font-family: 'Roboto', sans-serif;
+                font-size: 12px;
+                display: flex;
+
+                .brand-new{
+                    border: none;
+                    background-color: rgba(209, 146, 30, 0.315);
+                    padding: 5px;
+                    color: rgb(255, 132, 0);
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                }
+                .shipping{
+                    border: none;
+                    background-color: rgba(106, 188, 213, 0.315);
+                    padding: 5px;
+                    color: rgb(0, 110, 255);
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                }
+                .offer{
+                    border: none;
+                    background-color: rgba(221, 113, 113, 0.315);
+                    padding: 5px;
+                    color: rgb(255, 0, 0);
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .card-right {
+        flex: 0.4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+            gap:5px;
+           
+            .company{
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .location{
+                font-size: 13px;
+                color: gray;
+            }
+            .review{ 
+                font-size: 12px;
+                color: gray;
+            }
+        }
+
+        .middle{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .price-cut{
+                text-decoration: line-through;
+                color: red;
+            }
+            .new-price{
+                font-size: 30px !important;
+                font-weight: 600;
+            }
+            .plus-shipping{
+                color: gray;
+
+            }
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+
+            button{
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 5px;
+                border-radius: 10px;
+                background-color: white;
+                border: 1px solid rgba(128, 128, 128, 0.397);
+            }
+        }
+    }
+}
