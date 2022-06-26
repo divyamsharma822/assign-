@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.scss";
 
-const Card = ({img, title, brandNew, shipping, offer }) => {
+const Card = ({img, title, brandNew, shipping, offer, company,location,review, oldPrice, newPrice, shippingCharge}) => {
     return (
         <div className='card'>
             <div className='card-left'>
@@ -21,17 +21,17 @@ const Card = ({img, title, brandNew, shipping, offer }) => {
             </div>
             <div className='card-right'>
                 <div className='left'>
-                    <div className='company'>E.M.L.A</div>
-                    <div className='location'>LeHvare, France</div>
-                    <div className='review'>⭐️⭐️⭐️⭐️⭐️(23)</div>
+                    { company && <div className='company'>{company}</div> }
+                    { location && <div className='location'>{location}</div> }
+                    { review && <div className='review'>⭐️⭐️⭐️⭐️⭐️({review})</div> }
                 </div>
                 <div className='middle'>
-                    <div className="price-cut">$6500</div>
-                    <div className="new-price">$3433 </div>
-                    <div className="plus-shipping">+195Shipping</div>
+                    { oldPrice && <div className="price-cut">${oldPrice}</div> }
+                    { newPrice && <div className="new-price">${newPrice} </div> }
+                    { shippingCharge && <div className="plus-shipping">+{shippingCharge} Shipping</div> }
                 </div>
                 <div className='right'>
-                    <button>Add To Cart</button>
+                    <button type="button">Add To Cart</button>
                     <button>Make Offer</button>
                 </div>
             </div>
